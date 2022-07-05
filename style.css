@@ -32,7 +32,8 @@ body{
     width: 80%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    height: 100vh;
 }
 .card{
     width: 400px;
