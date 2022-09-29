@@ -1,140 +1,141 @@
-/*  set js */
-
-.dnone{
-    display: none;
+@font-face {
+    font-family: 'semi';
+    src: url('font/Poppins-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'regular';
+    src: url('font/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: 'light';
+    src: url('font/Poppins-Light.ttf');
 }
 
-
-.gantiSetelahDiClick{
-    color: #fff;
-    background-color: blueviolet;
-    border-radius: 50%;
-    border: none;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-/* end set js */
-*{
-    list-style: none;
-}
 
 
 body{
-    padding: 0;    
     margin: 0;
-    background: black;
-}
-
-.container{
-    background-color: black;
-    margin: auto;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-}
-.card{
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(to top, rgb(177, 21, 197),rgb(93, 150, 255));
-    margin-top: 100px;
-    padding: 30px 0 0;
-    border-radius: 10px;
-
-}
-.ganticard{
-    padding-bottom: 10px;
-}
-
-
-.mode{
-    margin-left: 10px;
-    font-family: cursive;
-    font-size: .7rem;
-    color: blueviolet;
-    cursor: pointer;
-    padding: 3px 4px;
-    background-color: white;
-    border-radius: 10px;
-}
-
-input{
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    margin-right: 10px;
-}
-input[placeholder]{
-    accent-color: pink;
-    color: black;
-    font-family: cursive;
-    font-size: .9rem;
-}
-.tambah{
-    border-radius: 50%;
-   color: black;
-   background-color: white;
-    border: none;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-ul{
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
     padding: 0;
+    box-sizing: border-box;
+    /* text-align: center; */
 }
-.gantiMode{
-    flex-direction: column;
+h1.creat{
+    margin: 30px;
+    text-transform: capitalize;
+    font-family: 'regular', sans-serif;
+    font-weight: 500;
+}
+input{
+    width: 70%;
+    display: block;
+    margin: 30px;
 }
 
-ul li{
-    width: 370px;
-    margin: 10px 0 -10;
-    border-top: 5px solid white;
-    padding-left: 30px;
-    position: relative;
+.judul{
+    padding: 10px 50px;
+    outline:3px solid blueviolet;
+    border-radius: 10px;
+    border: none;
 }
-ul li h1{
-    text-align: left;
-    font-family:  cursive;
+.judul[placeholder], .isi[placeholder]{
+    font-size: 16px;
+    font-family: 'light',sans-serif;
 }
-li h1, 
-li p,
-li span{
-    color: #fff;
-    font-family: cursive;
+.isi{
+    padding: 10px  50px;
+    height: 100px;
+    width: 70vw;
+    margin: 30px;
+    display: block;
+    outline:3px solid blueviolet;
+    border-radius: 10px;
+    border: none;
 }
-span.hapus{
-    position: absolute;
-    right:30px;
-    top: calc(50% - 5px);
-    font-size: 1rem;
-    cursor: pointer;
+
+button.buat{
+    margin: 0 30px;
+    outline:3px solid black;
+    border-radius: 10px;
     color: white;
-}
-ul li p{
-    text-align: left;
+    background-color: blueviolet;
+    padding: 5px 20px;
+    font-weight: bold;
+    border: none;
+    font-family: 'semi',sans-serif;
 }
 
 
-::-webkit-scrollbar{
-    width: 10px;
+
+.kotak{
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f0;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 30px;
+    font-family: 'semi',sans-serif;
+    border-bottom: 3px solid gainsboro;
+    box-shadow: 0px 3px 9px #fff;   
 }
-::-webkit-scrollbar-track{
-    background-color: #8a2be2;
-    border-radius: 50px;
+
+.kotak .kiri{
+    width: 80%;
+    margin-right: 30px;
+    text-align: justify;
 }
-::-webkit-scrollbar-thumb{
-    background-color: white;
-    border-radius: 50px;
+p.isiText{
+    font-family: 'light',sans-serif;
+    font-weight: 300;
+
 }
-::-webkit-scrollbar-button{
-    background-color: red;
+.kotak .kanan{
+
+    width: 20%;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.kiri .judulText{
+    margin-block: -10px;
+    color: red;
+    text-transform: capitalize;
+}
+
+button.edit{
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid black;
+    padding: 5px 20px;
+    border-radius: 7px;
+    text-transform: capitalize;
+}
+button.remove{
+    text-transform: capitalize;
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+        border: 2px solid black;
+        padding: 5px 20px;
+        border-radius: 7px;
+
+}
+
+@media screen and (max-width:768px) {
+        .kanan{
+            width: 20%;
+            flex-direction: column;
+            /* background-color: red; */
+            height: 150px;
+            margin-inline: 0;
+        }
+
 }
